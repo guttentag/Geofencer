@@ -59,6 +59,7 @@ struct MapView: View {
             .padding()
             
         }
+        .padding(.top, 15)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarTitle("New")
     }
