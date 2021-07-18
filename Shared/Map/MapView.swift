@@ -13,6 +13,10 @@ struct MapView: View {
         center: CLLocationCoordinate2D(latitude: 32.087674, longitude: 34.972913),
         span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
     )
+    @State private var name: String = ""
+    private let minDistance: Float = 10
+    private let maxDistance: Float = 500
+    @State private var radius: Float = 100
     
     var body: some View {
         VStack {
@@ -35,11 +39,28 @@ struct MapView: View {
                     .stroke(Color.red, lineWidth: 2)
                     .frame(width: 50, height: 50, alignment: .center)
             }
-            Text("Placeholder").padding(.all,40)
+            TextField("Geofence name", text: $name)
+                .padding()
+            HStack {
+                Slider(value: .init(
+                    get: { (radius - minDistance) / (maxDistance - minDistance) },
+                    set: { radius = ((maxDistance-minDistance) * $0) + minDistance }
+                )).padding(.leading, 20)
+                Spacer(minLength: 20)
+                Text("\(Int(radius)) m").frame(minWidth: 80)
+            }.padding()
+            Button("Create", action: {
+                // TODO save tap
+            })
+            .frame(minWidth: 200, minHeight: 60, alignment: .center)
+            .foregroundColor(.white)
+            .background(Color.blue)
+            .clipShape(Capsule())
+            .padding()
+            
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarTitle("New")
-        .padding(.vertical, 10)
     }
 }
 
