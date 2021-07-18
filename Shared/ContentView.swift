@@ -9,8 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView(content: {
+            List() {
+                Text("Item 1").padding()
+                Text("Item 2").padding()
+                Text("Item 3").padding()
+                Text("Item 4").padding()
+            }
+            .navigationBarTitle("Geofencer")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing: NavigationLink("add", destination: MapView()))
+        })
     }
 }
 
@@ -19,3 +28,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
