@@ -9,14 +9,26 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    @State private var region = MKCoordinateRegion(
-        center: CLLocationCoordinate2D(latitude: 32.087674, longitude: 34.972913),
-        span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
-    )
-    @State private var name: String = ""
+    var item: GeofenceRule?
+    @State private var region: MKCoordinateRegion
+    @State private var name: String
+    @State private var radius: Float
     private let minDistance: Float = 10
     private let maxDistance: Float = 500
-    @State private var radius: Float = 100
+    private var title: String
+    
+    init(_ geofence: GeofenceRule? = .none) {
+        item = geofence
+        region = MKCoordinateRegion(
+            center: (item ?? GeofenceRule.dummy).location,
+            latitudinalMeters: 1500,
+            longitudinalMeters: 1500)
+        
+        name = item?.name ?? ""
+        radius = item?.radius ?? 100
+        
+        title = geofence?.name ?? "Create New"
+    }
     
     var body: some View {
         VStack {
@@ -61,7 +73,7 @@ struct MapView: View {
         }
         .padding(.top, 15)
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarTitle("New")
+        .navigationBarTitle(title)
     }
 }
 

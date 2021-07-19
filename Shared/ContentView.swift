@@ -14,7 +14,7 @@ struct ContentView: View {
         let menuItems = repository.rules.map { MenuItem(geofence: $0) }
         NavigationView(content: {
             List(menuItems, id: \.id) { rule in
-                NavigationLink(destination: MapView()) {
+                NavigationLink(destination: MapView(rule.geofence)) {
                     MenuItemView(item: rule)
                 }
             }
