@@ -15,9 +15,10 @@ struct ContentView: View {
         NavigationView(content: {
             List(menuItems, id: \.id) { rule in
                 NavigationLink(destination: MapView()) {
-                    Text(rule.name)
+                    MenuItemView(item: rule)
                 }
             }
+            .listStyle(PlainListStyle())
             .navigationBarTitle("Geofencer")
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(trailing: NavigationLink("add", destination: MapView()))
