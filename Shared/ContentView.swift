@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var repository: RulesRepository
+    
     var body: some View {
+        let menuItems = repository.rules.map { MenuItem(geofence: $0) }
         NavigationView(content: {
-            List() {
-                Text("Item 1").padding()
-                Text("Item 2").padding()
-                Text("Item 3").padding()
-                Text("Item 4").padding()
+            List(menuItems, id: \.id) { rule in
+                NavigationLink(destination: MapView()) {
+                    Text(rule.name)
+                }
             }
             .navigationBarTitle("Geofencer")
             .navigationBarTitleDisplayMode(.inline)
@@ -25,7 +27,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(repository: RulesRepository())
     }
 }
-

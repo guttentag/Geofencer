@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C09B212326A5F5540005D45B /* RulesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B212226A5F5540005D45B /* RulesRepository.swift */; };
+		C09B212626A5FCBD0005D45B /* CoreLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B212526A5FCBD0005D45B /* CoreLocation+Extension.swift */; };
+		C09B212926A602870005D45B /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09B212826A602870005D45B /* MenuItem.swift */; };
 		C09E42B326A447470045CD7C /* MapTargetShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09E42B226A447470045CD7C /* MapTargetShape.swift */; };
 		C09E42B426A447470045CD7C /* MapTargetShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09E42B226A447470045CD7C /* MapTargetShape.swift */; };
 		C0B0D6DB26A47D5F00D357BD /* GeofenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0D6DA26A47D5F00D357BD /* GeofenceRule.swift */; };
@@ -40,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C09B212226A5F5540005D45B /* RulesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesRepository.swift; sourceTree = "<group>"; };
+		C09B212526A5FCBD0005D45B /* CoreLocation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreLocation+Extension.swift"; sourceTree = "<group>"; };
+		C09B212826A602870005D45B /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		C09E42B226A447470045CD7C /* MapTargetShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTargetShape.swift; sourceTree = "<group>"; };
 		C0B0D6DA26A47D5F00D357BD /* GeofenceRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceRule.swift; sourceTree = "<group>"; };
 		C0D66F6226A1A77500E6B2B7 /* GeofencerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencerApp.swift; sourceTree = "<group>"; };
@@ -91,6 +97,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C09B212426A5FCA20005D45B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C09B212526A5FCBD0005D45B /* CoreLocation+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C09B212726A602720005D45B /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				C09B212826A602870005D45B /* MenuItem.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		C09E42B126A447270045CD7C /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				C0B0D6DA26A47D5F00D357BD /* GeofenceRule.swift */,
+				C09B212226A5F5540005D45B /* RulesRepository.swift */,
 			);
 			path = Rule;
 			sourceTree = "<group>";
@@ -125,8 +148,10 @@
 			children = (
 				C0D66F6226A1A77500E6B2B7 /* GeofencerApp.swift */,
 				C0D66F6326A1A77500E6B2B7 /* ContentView.swift */,
+				C09B212726A602720005D45B /* Menu */,
 				C0B0D6D926A47D4300D357BD /* Rule */,
 				C09E42B126A447270045CD7C /* Map */,
+				C09B212426A5FCA20005D45B /* Extensions */,
 				C0D66F6426A1A77D00E6B2B7 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -335,9 +360,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C09B212626A5FCBD0005D45B /* CoreLocation+Extension.swift in Sources */,
 				C0D66F8D26A1A77D00E6B2B7 /* ContentView.swift in Sources */,
+				C09B212326A5F5540005D45B /* RulesRepository.swift in Sources */,
 				C0B0D6DB26A47D5F00D357BD /* GeofenceRule.swift in Sources */,
 				C09E42B326A447470045CD7C /* MapTargetShape.swift in Sources */,
+				C09B212926A602870005D45B /* MenuItem.swift in Sources */,
 				C0D66FA026A1AC8000E6B2B7 /* MapView.swift in Sources */,
 				C0D66F8B26A1A77D00E6B2B7 /* GeofencerApp.swift in Sources */,
 			);

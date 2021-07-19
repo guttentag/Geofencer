@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct GeofencerApp: App {
+    let repository = RulesRepository()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(repository: repository)
         }
     }
 }

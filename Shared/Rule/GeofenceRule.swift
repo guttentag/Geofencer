@@ -9,12 +9,12 @@ import Foundation
 import CoreLocation
 
 class GeofenceRule {
-    let id: String
+    var id: String?
     let name: String
     let location: CLLocationCoordinate2D
     let radius: Float
     
-    init(id: String, name: String, location: CLLocationCoordinate2D, radius: Float) {
+    init(id: String?, name: String, location: CLLocationCoordinate2D, radius: Float) {
         self.id = id
         self.name = name
         self.location = location
