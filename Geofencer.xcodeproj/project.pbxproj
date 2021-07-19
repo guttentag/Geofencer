@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C09E42B326A447470045CD7C /* MapTargetShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09E42B226A447470045CD7C /* MapTargetShape.swift */; };
 		C09E42B426A447470045CD7C /* MapTargetShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09E42B226A447470045CD7C /* MapTargetShape.swift */; };
+		C0B0D6DB26A47D5F00D357BD /* GeofenceRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B0D6DA26A47D5F00D357BD /* GeofenceRule.swift */; };
 		C0D66F7E26A1A77D00E6B2B7 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D66F7D26A1A77D00E6B2B7 /* Tests_iOS.swift */; };
 		C0D66F8926A1A77D00E6B2B7 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D66F8826A1A77D00E6B2B7 /* Tests_macOS.swift */; };
 		C0D66F8B26A1A77D00E6B2B7 /* GeofencerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D66F6226A1A77500E6B2B7 /* GeofencerApp.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		C09E42B226A447470045CD7C /* MapTargetShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTargetShape.swift; sourceTree = "<group>"; };
+		C0B0D6DA26A47D5F00D357BD /* GeofenceRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceRule.swift; sourceTree = "<group>"; };
 		C0D66F6226A1A77500E6B2B7 /* GeofencerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofencerApp.swift; sourceTree = "<group>"; };
 		C0D66F6326A1A77500E6B2B7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C0D66F6426A1A77D00E6B2B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		C0B0D6D926A47D4300D357BD /* Rule */ = {
+			isa = PBXGroup;
+			children = (
+				C0B0D6DA26A47D5F00D357BD /* GeofenceRule.swift */,
+			);
+			path = Rule;
+			sourceTree = "<group>";
+		};
 		C0D66F5C26A1A77500E6B2B7 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 			children = (
 				C0D66F6226A1A77500E6B2B7 /* GeofencerApp.swift */,
 				C0D66F6326A1A77500E6B2B7 /* ContentView.swift */,
+				C0B0D6D926A47D4300D357BD /* Rule */,
 				C09E42B126A447270045CD7C /* Map */,
 				C0D66F6426A1A77D00E6B2B7 /* Assets.xcassets */,
 			);
@@ -325,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0D66F8D26A1A77D00E6B2B7 /* ContentView.swift in Sources */,
+				C0B0D6DB26A47D5F00D357BD /* GeofenceRule.swift in Sources */,
 				C09E42B326A447470045CD7C /* MapTargetShape.swift in Sources */,
 				C0D66FA026A1AC8000E6B2B7 /* MapView.swift in Sources */,
 				C0D66F8B26A1A77D00E6B2B7 /* GeofencerApp.swift in Sources */,
